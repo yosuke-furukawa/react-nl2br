@@ -1,7 +1,7 @@
 'use strict';
 
-const React = require('react');
-const newlineRegex = /(\r\n|\n\r|\r|\n)/g;
+var React = require('react');
+var newlineRegex = /(\r\n|\n\r|\r|\n)/g;
 
 module.exports = function(str) {
   if (typeof str != 'string') {
