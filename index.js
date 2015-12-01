@@ -4,9 +4,12 @@ var React = require('react');
 var newlineRegex = /(\r\n|\n\r|\r|\n)/g;
 
 module.exports = function(str) {
-  if (typeof str != 'string') {
-    throw new TypeError('nl2br requires string');
+  if (typeof str === 'number') {
+    return str;
+  } else if (typeof str !== 'string') {
+    return '';
   }
+
   return str.split(newlineRegex).map(function(line) {
     if (line.match(newlineRegex)) {
       return React.createElement('br');
