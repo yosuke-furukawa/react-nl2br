@@ -7,11 +7,11 @@ describe('nl2br', function(){
     const result = nl2br('aaa\nbbb\nccc\nddd');
     const expected = [
       'aaa',
-      React.createElement('br', { key: 0 }),
-      'bbb',
       React.createElement('br', { key: 1 }),
+      'bbb',
+      React.createElement('br', { key: 3 }),
       'ccc',
-      React.createElement('br', { key: 2 }),
+      React.createElement('br', { key: 5 }),
       'ddd'
     ];
     assert.deepEqual(expected, result);

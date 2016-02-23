@@ -10,10 +10,9 @@ module.exports = function(str) {
     return '';
   }
 
-  var index = 0;
-  return str.split(newlineRegex).map(function(line) {
+  return str.split(newlineRegex).map(function(line, index) {
     if (line.match(newlineRegex)) {
-      return React.createElement('br', { key: index++ });
+      return React.createElement('br', { key: index });
     } else {
       return line;
     }
