@@ -5,7 +5,15 @@ const assert = require('assert');
 describe('nl2br', function(){
   it('should parse newlines', function(){
     const result = nl2br('aaa\nbbb\nccc\nddd');
-    const expected = ['aaa', React.createElement('br'), 'bbb', React.createElement('br'), 'ccc', React.createElement('br'), 'ddd'];
+    const expected = [
+      'aaa',
+      React.createElement('br', { key: 1 }),
+      'bbb',
+      React.createElement('br', { key: 3 }),
+      'ccc',
+      React.createElement('br', { key: 5 }),
+      'ddd'
+    ];
     assert.deepEqual(expected, result);
   });
 
