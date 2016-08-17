@@ -1,6 +1,6 @@
 {
   "name": "react-nl2br",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "newlines like '\\n', '\\n\\r' to <br /> for React",
   "main": "index.js",
   "scripts": {
