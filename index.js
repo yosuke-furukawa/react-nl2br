@@ -13,8 +13,7 @@ module.exports = function(str) {
   return str.split(newlineRegex).map(function(line, index) {
     if (line.match(newlineRegex)) {
       return React.createElement('br', { key: index });
-    } else {
-      return line;
     }
+    return line;
   });
 };
