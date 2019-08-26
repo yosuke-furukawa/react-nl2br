@@ -4,10 +4,8 @@ var React = require('react');
 var newlineRegex = /(\r\n|\r|\n)/g;
 
 module.exports = function(str) {
-  if (typeof str === 'number') {
+  if (typeof str !== 'string') {
     return str;
-  } else if (typeof str !== 'string') {
-    return '';
   }
 
   return str.split(newlineRegex).map(function(line, index) {
