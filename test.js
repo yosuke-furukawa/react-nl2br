@@ -23,28 +23,40 @@ describe('nl2br', function(){
     assert.deepEqual(expected, result);
   });
 
-  it('should return an empty string if the param is undefined', function () {
+  it('should return undefined if the param is undefined', function () {
     const result = nl2br(undefined);
-    const expected = '';
+    const expected = undefined;
     assert.deepEqual(expected, result);
   });
 
-  it('should return an empty string if the param is null', function () {
+  it('should return null if the param is null', function () {
     const result = nl2br(null);
-    const expected = '';
+    const expected = null;
     assert.deepEqual(expected, result);
   });
 
-  it('should return an empty string if the param is an array', function () {
+  it('should return an array if the param is an array', function () {
     const result = nl2br([]);
-    const expected = '';
+    const expected = [];
     assert.deepEqual(expected, result);
   });
 
-  it('should return an empty string if the param is an object', function () {
+  it('should return an object if the param is an object', function () {
     const result = nl2br({});
-    const expected = '';
+    const expected = {};
     assert.deepEqual(expected, result);
+  });
+  
+  it('should return a boolean if the param is a boolean', function () {
+    const result = nl2br(false);
+    const expected = false;
+    assert.deepEqual(expected, result);
+  });
+
+  it('should return the given React component if the param is a React component', function () {
+    const component = React.createElement('p', {}, 'Lorem ipsum');
+    const result = nl2br(component);
+    assert.strictEqual(component, result);
   });
 });
 
