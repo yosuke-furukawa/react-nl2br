@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/yosuke-furukawa/react-nl2br#readme",
   "devDependencies": {
-    "mocha": "6.2.0"
+    "mocha": "6.2.1"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0 || ^16.0.0"
