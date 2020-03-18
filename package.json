@@ -22,7 +22,7 @@
   "homepage": "https://github.com/yosuke-furukawa/react-nl2br#readme",
   "types": "index.d.ts",
   "devDependencies": {
-    "mocha": "7.0.1"
+    "mocha": "7.1.1"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0 || ^16.0.0",
