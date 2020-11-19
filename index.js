@@ -1,6 +1,6 @@
 'use strict';
 
-var React = require('react');
+var {jsx: _jsx} = require('react/jsx-runtime');
 var newlineRegex = /(\r\n|\r|\n)/g;
 
 module.exports = function(str) {
@@ -10,7 +10,7 @@ module.exports = function(str) {
 
   return str.split(newlineRegex).map(function(line, index) {
     if (line.match(newlineRegex)) {
-      return React.createElement('br', { key: index });
+      return _jsx('br', { key: index });
     }
     return line;
   });
