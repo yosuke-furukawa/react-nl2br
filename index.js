@@ -1,6 +1,7 @@
 'use strict';
 
-var {jsx: _jsx} = require('react/jsx-runtime');
+var jsxRuntime = require('react/jsx-runtime');
+var _jsx = jsxRuntime.jsx;
 var newlineRegex = /(\r\n|\r|\n)/g;
 
 module.exports = function(str) {
