@@ -23,7 +23,7 @@
   "types": "index.d.ts",
   "devDependencies": {
     "@types/react": "17.0.2",
-    "mocha": "8.3.0"
+    "mocha": "8.4.0"
   },
   "peerDependencies": {
     "react": "^15.7.0 || ^16.14.0 || ^17.0.0"
