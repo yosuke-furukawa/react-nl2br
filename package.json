@@ -23,7 +23,7 @@
   "types": "index.d.ts",
   "devDependencies": {
     "@types/react": "18.2.18",
-    "mocha": "10.0.0"
+    "mocha": "10.4.0"
   },
   "peerDependencies": {
     "react": "^15.7.0 || ^16.14.0 || ^17.0.0 || ^18.0.0"
