@@ -25,6 +25,8 @@
   "types": "index.d.ts",
   "devDependencies": {
     "@eslint/js": "^9.27.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
     "@types/react": "18.2.18",
     "@vitest/ui": "^3.1.4",
     "eslint": "^9.27.0",
