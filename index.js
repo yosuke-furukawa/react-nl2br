@@ -11,7 +11,7 @@ module.exports = function(str) {
 
   return str.split(newlineRegex).map(function(line, index) {
     if (line.match(newlineRegex)) {
-      return _jsx('br', { key: index });
+      return _jsx('br', {}, index);
     }
     return line;
   });

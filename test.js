@@ -1,62 +1,65 @@
-const nl2br = require('.');
-const React = require('react');
-const assert = require('assert');
+import { test, expect } from 'vitest'; // Changed from describe, it
+import nl2br from '.'; 
+import React from 'react';
 
-describe('nl2br', function(){
-  it('should parse newlines', function(){
-    const result = nl2br('aaa\nbbb\nccc\nddd');
-    const expected = [
-      'aaa',
-      React.createElement('br', { key: 1 }),
-      'bbb',
-      React.createElement('br', { key: 3 }),
-      'ccc',
-      React.createElement('br', { key: 5 }),
-      'ddd'
-    ];
-    assert.deepEqual(expected, result);
-  });
-
-  it('should return numbers', function (){
-    const result = nl2br(42);
-    const expected = 42;
-    assert.deepEqual(expected, result);
-  });
-
-  it('should return undefined if the param is undefined', function () {
-    const result = nl2br(undefined);
-    const expected = undefined;
-    assert.deepEqual(expected, result);
-  });
-
-  it('should return null if the param is null', function () {
-    const result = nl2br(null);
-    const expected = null;
-    assert.deepEqual(expected, result);
-  });
-
-  it('should return an array if the param is an array', function () {
-    const result = nl2br([]);
-    const expected = [];
-    assert.deepEqual(expected, result);
-  });
-
-  it('should return an object if the param is an object', function () {
-    const result = nl2br({});
-    const expected = {};
-    assert.deepEqual(expected, result);
-  });
-  
-  it('should return a boolean if the param is a boolean', function () {
-    const result = nl2br(false);
-    const expected = false;
-    assert.deepEqual(expected, result);
-  });
-
-  it('should return the given React component if the param is a React component', function () {
-    const component = React.createElement('p', {}, 'Lorem ipsum');
-    const result = nl2br(component);
-    assert.strictEqual(component, result);
-  });
+test('nl2br should correctly parse newlines in a string into <br /> elements', () => {
+  const result = nl2br('aaa\nbbb\nccc\nddd');
+  const expected = [
+    'aaa',
+    React.createElement('br', { key: 1 }),
+    'bbb',
+    React.createElement('br', { key: 3 }),
+    'ccc',
+    React.createElement('br', { key: 5 }),
+    'ddd'
+  ];
+  expect(result).toEqual(expected);
 });
 
+test('nl2br should return numbers as is when passed a number', () => {
+  const result = nl2br(42);
+  const expected = 42;
+  expect(result).toEqual(expected);
+});
+
+test('nl2br should return undefined as is when passed undefined', () => {
+  const result = nl2br(undefined);
+  const expected = undefined;
+  expect(result).toEqual(expected);
+});
+
+test('nl2br should return null as is when passed null', () => {
+  const result = nl2br(null);
+  const expected = null;
+  expect(result).toEqual(expected);
+});
+
+test('nl2br should return an empty array as is when passed an empty array', () => {
+  const result = nl2br([]);
+  const expected = [];
+  expect(result).toEqual(expected);
+});
+
+test('nl2br should return an empty object as is when passed an empty object', () => {
+  const result = nl2br({});
+  const expected = {};
+  expect(result).toEqual(expected);
+});
+
+test('nl2br should return a boolean (false) as is when passed a boolean (false)', () => {
+  const result = nl2br(false);
+  const expected = false;
+  expect(result).toEqual(expected);
+});
+
+test('nl2br should return a boolean (true) as is when passed a boolean (true)', () => {
+  const result = nl2br(true);
+  const expected = true;
+  expect(result).toEqual(expected);
+});
+
+test('nl2br should return the given React component as is when passed a React component', () => {
+  const component = React.createElement('p', {}, 'Lorem ipsum');
+  const result = nl2br(component);
+  expect(result).toBe(component);
+});

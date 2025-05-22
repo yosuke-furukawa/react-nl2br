@@ -4,7 +4,9 @@
   "description": "newlines like '\\n', '\\n\\r' to <br /> for React",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "vitest",
+    "lint": "eslint .",
+    "test:ui": "vitest --ui"
   },
   "repository": {
     "type": "git",
@@ -22,10 +24,20 @@
   "homepage": "https://github.com/yosuke-furukawa/react-nl2br#readme",
   "types": "index.d.ts",
   "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
     "@types/react": "18.2.18",
-    "mocha": "10.0.0"
+    "@vitest/ui": "^3.1.4",
+    "eslint": "^9.27.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-vitest": "^0.5.4",
+    "globals": "^16.1.0",
+    "jsdom": "^26.1.0",
+    "vitest": "^3.1.4"
   },
   "peerDependencies": {
-    "react": "^15.7.0 || ^16.14.0 || ^17.0.0 || ^18.0.0"
+    "react": "^15.7.0 || ^16.14.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
   }
 }
