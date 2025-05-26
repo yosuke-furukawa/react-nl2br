@@ -4,7 +4,8 @@
   "description": "newlines like '\\n', '\\n\\r' to <br /> for React",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "vitest run",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,9 @@
   "homepage": "https://github.com/yosuke-furukawa/react-nl2br#readme",
   "types": "index.d.ts",
   "devDependencies": {
-    "@types/react": "18.2.18",
-    "mocha": "10.0.0"
+    "@types/react": "18.2.62",
+    "eslint": "^9.0.0",
+    "vitest": "1.6.0"
   },
   "peerDependencies": {
     "react": "^15.7.0 || ^16.14.0 || ^17.0.0 || ^18.0.0"
